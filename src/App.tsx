@@ -1,16 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-
-// The Digital/Traditional should alternate depending on the type of clock
-// being displayed
-const ClockHeader = () => {
-    return (
-        <h3>
-            Digital/Traditional Clock
-        </h3>
-    )
-};
+import './App.scss';
+import './styles/digital/numbers.scss';
 
 // toggle will be handled with useState
 // Part 1: Digital Clock
@@ -24,6 +14,12 @@ const ClockHeader = () => {
  * Have a basic clock display the time with no animations
  * Break the time into pieces and 
  * Maybe we can use setInterval to clock?
+ * 
+ * 22:30 -> 10:30 -> 10
+ * 
+ * Successes: 
+ * Basic digital clock runs
+ * Create css to display a digital one
  */
 
 const ClockIndex = () => {
@@ -38,7 +34,7 @@ const ClockIndex = () => {
         if (hours > 12) {
             return `${0}${hours - 12}`;
         };
-        
+
         return hours;
     }, [hours]).toString();
 
@@ -69,7 +65,16 @@ const ClockIndex = () => {
     return (
         <div className="App">
             <header className="App-header">
-                { `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }
+                <div className='digital-wrapper'>
+
+                    <div className='digital-one'>
+                        <div className='top' />
+                        <div className='spacer' />
+                        <div className='bottom' />
+                    </div>
+                    
+                    <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div>
+                </div>
             </header>
         </div>
     );
