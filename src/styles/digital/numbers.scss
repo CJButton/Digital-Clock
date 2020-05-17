@@ -11,7 +11,8 @@
 .digital-five,
 .digital-six,
 .digital-seven,
-.digital-eight {
+.digital-eight,
+.digital-nine {
     width: 100px;
     height: 200px;
     background-color: black;
@@ -221,7 +222,8 @@
     }
 }
 
-.digital-eight {
+.digital-eight,
+.digital-nine {
     .left-and-right {
         display: flex;
         .left {
@@ -290,6 +292,19 @@
                 width: 10px;
                 margin-left: auto;
             }
+        }
+    }
+}
+
+.digital-nine {
+    .bottom-half {
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
         }
     }
 }
