@@ -9,7 +9,8 @@
 .digital-three,
 .digital-four,
 .digital-five,
-.digital-six {
+.digital-six,
+.digital-seven {
     width: 100px;
     height: 200px;
     background-color: black;
@@ -45,7 +46,8 @@
 .digital-three,
 .digital-four,
 .digital-five,
-.digital-six {
+.digital-six,
+.digial-seven {
     .top-half {
         .top {
             border-top: 10px solid cyan;
@@ -184,6 +186,35 @@
                 width: 10px;
                 margin-left: auto;
             }
+        }
+    }
+}
+
+.digital-seven {
+    .top-half {
+        .top {
+            border-top: 10px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+        }
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+    .bottom-half {
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
         }
     }
 }
