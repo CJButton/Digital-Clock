@@ -10,7 +10,8 @@
 .digital-four,
 .digital-five,
 .digital-six,
-.digital-seven {
+.digital-seven,
+.digital-eight {
     width: 100px;
     height: 200px;
     background-color: black;
@@ -47,7 +48,8 @@
 .digital-four,
 .digital-five,
 .digital-six,
-.digial-seven {
+.digial-seven,
+.digitial-eight {
     .top-half {
         .top {
             border-top: 10px solid cyan;
@@ -215,6 +217,79 @@
             border-bottom: 10px solid transparent;
             width: 10px;
             margin-left: auto;
+        }
+    }
+}
+
+.digital-eight {
+    .left-and-right {
+        display: flex;
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+        }
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+    .center-top {
+        border-bottom: 5px solid cyan;
+        border-left: 10px solid transparent;
+        height: 0;
+        border-right: 10px solid transparent;
+
+    }
+
+    .center-bottom {
+            border-top: 5px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+    }
+    .top-half {
+        .top {
+            border-top: 10px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+        }
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+        }
+    }
+    .bottom-half {
+        .bottom {
+            border-bottom: 10px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+        }
+        .left-and-right {
+            display: flex;
+            .left {
+                border-left: 10px solid cyan;
+                border-top: 10px solid transparent;
+                height: 50px;
+                border-bottom: 10px solid transparent;
+            }
+            .right {
+                border-right: 10px solid cyan;
+                border-top: 10px solid transparent;
+                height: 50px;
+                border-bottom: 10px solid transparent;
+                width: 10px;
+                margin-left: auto;
+            }
         }
     }
 }
