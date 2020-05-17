@@ -12,7 +12,8 @@
 .digital-six,
 .digital-seven,
 .digital-eight,
-.digital-nine {
+.digital-nine,
+.digital-zero {
     width: 100px;
     height: 200px;
     background-color: black;
@@ -223,7 +224,8 @@
 }
 
 .digital-eight,
-.digital-nine {
+.digital-nine,
+.digital-zero {
     .left-and-right {
         display: flex;
         .left {
@@ -307,4 +309,8 @@
             margin-left: auto;
         }
     }
+}
+
+.digital-zero {
+
 }

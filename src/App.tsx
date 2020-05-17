@@ -67,6 +67,23 @@ const ClockIndex = () => {
             <header className="App-header">
                 <div className='digital-wrapper'>
 
+                <div className='digital-zero'>
+                    <div className='top-half'>
+                        <div className='top' />
+                        <div className='left-and-right'>
+                            <div className='left' />
+                            <div className='right' />
+                        </div>
+                    </div>
+                    <div className='bottom-half'>
+                        <div className='left-and-right'>
+                            <div className='left' />
+                            <div className='right' />
+                        </div>
+                            <div className='bottom' />
+                    </div>
+                </div>
+
                 <div className='digital-nine'>
                     <div className='top-half'>
                         <div className='top' />
