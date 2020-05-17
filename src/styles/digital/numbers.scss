@@ -5,7 +5,8 @@
 }
 
 .digital-one,
-.digital-two {
+.digital-two,
+.digital-three {
     width: 100px;
     height: 175px;
     background-color: black;
@@ -21,12 +22,7 @@
         height: 50px;
         border-bottom: 10px solid transparent;
         width: 10px;
-        margin: 0 auto;
-        // width: 10px;
-        // height: 50px;
-        // background-color: cyan;
-        // margin: auto;
-        // border-radius: 100px 15px 15px 100px;
+        margin-left: auto;
     }
 
     .top {
@@ -42,20 +38,19 @@
     }
 }
 
-.digital-two {
+.digital-two,
+.digital-three {
     .top-half {
         .top {
             border-top: 10px solid cyan;
             border-left: 10px solid transparent;
             height: 0;
             border-right: 10px solid transparent;
-            width: 30px;
-            margin-left: auto;
         }
         .right {
             border-right: 10px solid cyan;
             border-top: 10px solid transparent;
-            height: 30px;
+            height: 50px;
             border-bottom: 10px solid transparent;
             width: 10px;
             margin-left: auto;
@@ -67,8 +62,6 @@
         border-left: 10px solid transparent;
         height: 0;
         border-right: 10px solid transparent;
-        width: 30px;
-        margin-left: auto;
 
     }
 
@@ -77,25 +70,32 @@
             border-left: 10px solid transparent;
             height: 0;
             border-right: 10px solid transparent;
-            width: 30px;
-            margin-left: auto;
     }
 
     .bottom-half {
         .left {
             border-left: 10px solid cyan;
             border-top: 10px solid transparent;
-            height: 30px;
+            height: 50px;
             border-bottom: 10px solid transparent;
-            width: 10px;
-            margin-left: 50%;
         }
         .bottom {
             border-bottom: 10px solid cyan;
             border-left: 10px solid transparent;
             height: 0;
             border-right: 10px solid transparent;
-            width: 30px;
+        }
+    }
+}
+
+.digital-three {
+    .bottom-half {
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
             margin-left: auto;
         }
     }

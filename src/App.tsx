@@ -66,6 +66,19 @@ const ClockIndex = () => {
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
+                    <div className='digital-three'>
+                    <div className='top-half'>
+                            <div className='top' />
+                            <div className='right' />
+                        </div>
+                        <div className='center-top' />
+                        <div className='center-bottom' />
+                        <div className='bottom-half'>
+                            <div className='right' />
+                            <div className='bottom' />
+                        </div>
+                    </div>
+
 
                     <div className='digital-one'>
                         <div className='top' />
