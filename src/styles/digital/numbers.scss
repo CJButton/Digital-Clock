@@ -6,9 +6,12 @@
 
 .digital-one,
 .digital-two,
-.digital-three {
+.digital-three,
+.digital-four,
+.digital-five,
+.digital-six {
     width: 100px;
-    height: 175px;
+    height: 200px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -39,7 +42,10 @@
 }
 
 .digital-two,
-.digital-three {
+.digital-three,
+.digital-four,
+.digital-five,
+.digital-six {
     .top-half {
         .top {
             border-top: 10px solid cyan;
@@ -97,6 +103,87 @@
             border-bottom: 10px solid transparent;
             width: 10px;
             margin-left: auto;
+        }
+    }
+}
+
+.digital-four {
+    .top-half {
+        display: flex;
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+        }
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+    .bottom-half {
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+}
+
+.digital-five {
+    .top-half {
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+        }
+    }
+    .bottom-half {
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+}
+
+.digital-six {
+    .top-half {
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 50px;
+            border-bottom: 10px solid transparent;
+        }
+    }
+    .bottom-half {
+        .left-and-right {
+            display: flex;
+            .left {
+                border-left: 10px solid cyan;
+                border-top: 10px solid transparent;
+                height: 50px;
+                border-bottom: 10px solid transparent;
+            }
+            .right {
+                border-right: 10px solid cyan;
+                border-top: 10px solid transparent;
+                height: 50px;
+                border-bottom: 10px solid transparent;
+                width: 10px;
+                margin-left: auto;
+            }
         }
     }
 }
