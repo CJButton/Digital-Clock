@@ -4,32 +4,99 @@
     background-color: darkblue;
 }
 
-.digital-one {
+.digital-one,
+.digital-two {
     width: 100px;
-    height: 100px;
+    height: 175px;
     background-color: black;
     display: flex;
     flex-direction: column;
+}
+
+.digital-one {
+    .top,
+    .bottom {
+        border-right: 10px solid cyan;
+        border-top: 10px solid transparent;
+        height: 50px;
+        border-bottom: 10px solid transparent;
+        width: 10px;
+        margin: 0 auto;
+        // width: 10px;
+        // height: 50px;
+        // background-color: cyan;
+        // margin: auto;
+        // border-radius: 100px 15px 15px 100px;
+    }
 
     .top {
-        width: 10px;
-        height: 50px;
-        background-color: cyan;
-        margin: auto;
-        border-radius: 75px 50px 50px 75px;
         margin-top: 5px;
     }
 
     .spacer {
-        height: 5px;
+        height: 2px;
     }
 
     .bottom {
-        width: 10px;
-        height: 50px;
-        background-color: cyan;
-        margin: auto;
-        border-radius: 75px 50px 50px 75px;
         margin-bottom: 5px;
+    }
+}
+
+.digital-two {
+    .top-half {
+        .top {
+            border-top: 10px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+            width: 30px;
+            margin-left: auto;
+        }
+        .right {
+            border-right: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 30px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: auto;
+        }
+    }
+
+    .center-top {
+        border-bottom: 5px solid cyan;
+        border-left: 10px solid transparent;
+        height: 0;
+        border-right: 10px solid transparent;
+        width: 30px;
+        margin-left: auto;
+
+    }
+
+    .center-bottom {
+            border-top: 5px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+            width: 30px;
+            margin-left: auto;
+    }
+
+    .bottom-half {
+        .left {
+            border-left: 10px solid cyan;
+            border-top: 10px solid transparent;
+            height: 30px;
+            border-bottom: 10px solid transparent;
+            width: 10px;
+            margin-left: 50%;
+        }
+        .bottom {
+            border-bottom: 10px solid cyan;
+            border-left: 10px solid transparent;
+            height: 0;
+            border-right: 10px solid transparent;
+            width: 30px;
+            margin-left: auto;
+        }
     }
 }

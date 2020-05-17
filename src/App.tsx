@@ -72,6 +72,20 @@ const ClockIndex = () => {
                         <div className='spacer' />
                         <div className='bottom' />
                     </div>
+
+                    <div className='digital-two'>
+                        <div className='top-half'>
+                            <div className='top' />
+                            <div className='right' />
+                        </div>
+                        <div className='center-top' />
+                        <div className='center-bottom' />
+                        <div className='bottom-half'>
+                            <div className='left' />
+                            <div className='bottom' />
+                        </div>
+
+                    </div>
                     
                     <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div>
                 </div>
