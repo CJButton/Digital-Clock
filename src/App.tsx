@@ -1,6 +1,37 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './App.scss';
 import './styles/digital/numbers.scss';
+import Zero from './DigitalNumbers/Zero'
+import One from './DigitalNumbers/One'
+import Two from './DigitalNumbers/Two'
+import Three from './DigitalNumbers/Three'
+import Four from './DigitalNumbers/Four'
+import Five from './DigitalNumbers/Five'
+import Six from './DigitalNumbers/Six'
+import Seven from './DigitalNumbers/Seven'
+import Eight from './DigitalNumbers/Eight'
+import Nine from './DigitalNumbers/Nine'
+
+type DigitalComponents = {
+    [key: number]: () => JSX.Element;
+}
+
+const getDigitalComponent = (num: number) => {
+    const digitalComponents: DigitalComponents = {
+        0: Zero,
+        1: One,
+        2: Two,
+        3: Three,
+        4: Four,
+        5: Five,
+        6: Six,
+        7: Seven,
+        8: Eight,
+        9: Nine,
+    };
+    return digitalComponents[num];
+}
+
 
 // toggle will be handled with useState
 // Part 1: Digital Clock
@@ -60,153 +91,20 @@ const ClockIndex = () => {
             intervalInitiatiors();
         }
         initiateInterval();
-    }, [])
+    }, []);
+
+    // getDigitalComponent
 
     return (
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
 
-                <div className='digital-zero'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                    </div>
-                    <div className='bottom-half'>
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                            <div className='bottom' />
-                    </div>
-                </div>
-
-                <div className='digital-nine'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                    <div className='bottom-half'>
-                        <div className='right' />
-                    </div>
-                </div>
-
-                <div className='digital-eight'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                    <div className='bottom-half'>
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                            <div className='bottom' />
-                    </div>
-                </div>
-
-                <div className='digital-seven'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='right' />
-                    </div>
-                    <div className='bottom-half'>
-                        <div className='right' />
-                    </div>
-                </div>
-
-                <div className='digital-six'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='left' />
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                    <div className='bottom-half'>
-                        <div className='left-and-right'>
-                            <div className='left' />
-                            <div className='right' />
-                        </div>
-                            <div className='bottom' />
-                    </div>
-                </div>
-
-                <div className='digital-five'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='left' />
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                        <div className='bottom-half'>
-                            <div className='right' />
-                            <div className='bottom' />
-                        </div>
-                </div>
-
-
-
-                <div className='digital-four'>
-                    <div className='top-half'>
-                        <div className='left' />
-                        <div className='right' />
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                    <div className='bottom-half'>
-                        <div className='right' />
-                    </div>
-                </div>
-
-                    
-                <div className='digital-three'>
-                    <div className='top-half'>
-                        <div className='top' />
-                        <div className='right' />
-                    </div>
-                    <div className='center-top' />
-                    <div className='center-bottom' />
-                        <div className='bottom-half'>
-                            <div className='right' />
-                            <div className='bottom' />
-                        </div>
-                </div>
-
-
-                    <div className='digital-one'>
-                        <div className='top' />
-                        {/* <div className='spacer' /> */}
-                        <div className='bottom' />
-                    </div>
-
-                    <div className='digital-two'>
-                        <div className='top-half'>
-                            <div className='top' />
-                            <div className='right' />
-                        </div>
-                        <div className='center-top' />
-                        <div className='center-bottom' />
-                        <div className='bottom-half'>
-                            <div className='left' />
-                            <div className='bottom' />
-                        </div>
-
-                    </div>
-                    
                     <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div>
+
+                    <div style={{ display: 'flex' }}>
+        
+                    </div>
                 </div>
             </header>
         </div>
