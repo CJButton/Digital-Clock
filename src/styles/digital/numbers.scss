@@ -1,7 +1,7 @@
 .digital-wrapper {
     width: 100%;
     height: 200px;
-    background-color: darkblue;
+    background-color: black;
 }
 
 .digital-one,
@@ -19,6 +19,8 @@
     background-color: black;
     display: flex;
     flex-direction: column;
+    margin: auto;
+    
 }
 
 .digital-one {

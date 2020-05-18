@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, memo } from 'react';
 import './App.scss';
 import './styles/digital/numbers.scss';
 import Zero from './DigitalNumbers/Zero'
@@ -13,21 +13,21 @@ import Eight from './DigitalNumbers/Eight'
 import Nine from './DigitalNumbers/Nine'
 
 type DigitalComponents = {
-    [key: number]: () => JSX.Element;
+    [key: string]: JSX.Element;
 }
 
-const getDigitalComponent = (num: number) => {
-    const digitalComponents: DigitalComponents = {
-        0: Zero,
-        1: One,
-        2: Two,
-        3: Three,
-        4: Four,
-        5: Five,
-        6: Six,
-        7: Seven,
-        8: Eight,
-        9: Nine,
+const getDigitalComponent = (num: string) => {
+    const digitalComponents: any = {
+        "0": Zero,
+        "1": One,
+        "2": Two,
+        "3": Three,
+        "4": Four,
+        "5": Five,
+        "6": Six,
+        "7": Seven,
+        "8": Eight,
+        "9": Nine,
     };
     return digitalComponents[num];
 }
@@ -62,12 +62,12 @@ const ClockIndex = () => {
             return hours - 12;
         };
 
-        if (hours > 12) {
-            return `${0}${hours - 12}`;
-        };
+        // if (hours > 12) {
+        //     return `${0}${hours - 12}`;
+        // };
 
         return hours;
-    }, [hours]).toString();
+    }, [hours]).toString().split('');
 
     const memoizedMinutes = useMemo(() => {
         return minutes;
@@ -93,18 +93,26 @@ const ClockIndex = () => {
         initiateInterval();
     }, []);
 
-    // getDigitalComponent
+    const HourA = getDigitalComponent(memoizedHours[0]);
+    const HourB = memoizedHours[1] ? getDigitalComponent(memoizedHours[1]) : getDigitalComponent("0")
+    const MinA = getDigitalComponent(memoizedMinutes[0]);
+    const MinB = memoizedMinutes[1] ? getDigitalComponent(memoizedMinutes[1]) : getDigitalComponent("0")
+    const SecA = getDigitalComponent(zeroedSeconds[0]);
+    const SecB = zeroedSeconds[1] ? getDigitalComponent(zeroedSeconds[1]) : getDigitalComponent("0")
 
     return (
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
-
-                    <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div>
-
                     <div style={{ display: 'flex' }}>
-        
+                        <HourA />
+                        <HourB  />
+                        <MinB />
+                        <MinA />
+                        <SecA />
+                        <SecB />
                     </div>
+                    {/* <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div> */}
                 </div>
             </header>
         </div>
