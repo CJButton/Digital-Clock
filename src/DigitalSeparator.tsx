@@ -1,12 +1,12 @@
 import React from 'react';
 
-const One = () => {
+const DigitalSeparator = () => {
     return (
-        <div className='digital-one'>
+        <div className='digital-separator'>
             <div className='top' />
             <div className='bottom' />
         </div>
-    );
-};
+    )
+}
 
-export default One;
+export default DigitalSeparator;
