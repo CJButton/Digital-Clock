@@ -12,6 +12,8 @@ import Seven from './DigitalNumbers/Seven'
 import Eight from './DigitalNumbers/Eight'
 import Nine from './DigitalNumbers/Nine'
 
+import DigitalNumberBase from './DigitalNumberBase';
+
 type DigitalComponents = {
     [key: string]: JSX.Element;
 }
@@ -67,7 +69,7 @@ const ClockIndex = () => {
         // };
 
         return hours;
-    }, [hours]).toString().split('');
+    }, [hours]).toString();
 
     const memoizedMinutes = useMemo(() => {
         return minutes;
@@ -93,26 +95,23 @@ const ClockIndex = () => {
         initiateInterval();
     }, []);
 
-    const HourA = getDigitalComponent(memoizedHours[0]);
-    const HourB = memoizedHours[1] ? getDigitalComponent(memoizedHours[1]) : getDigitalComponent("0")
-    const MinA = getDigitalComponent(memoizedMinutes[0]);
-    const MinB = memoizedMinutes[1] ? getDigitalComponent(memoizedMinutes[1]) : getDigitalComponent("0")
-    const SecA = getDigitalComponent(zeroedSeconds[0]);
-    const SecB = zeroedSeconds[1] ? getDigitalComponent(zeroedSeconds[1]) : getDigitalComponent("0")
-
     return (
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
                     <div style={{ display: 'flex' }}>
-                        <HourA />
-                        <HourB  />
-                        <MinB />
-                        <MinA />
-                        <SecA />
-                        <SecB />
+                        <DigitalNumberBase className='digital-one' />
+                        <DigitalNumberBase className='digital-two' />
+                        <DigitalNumberBase className='digital-three' />
+                        <DigitalNumberBase className='digital-four' />
+                        <DigitalNumberBase className='digital-five' />
+                        <DigitalNumberBase className='digital-six' />
+                        <DigitalNumberBase className='digital-seven' />
+                        <DigitalNumberBase className='digital-eight' />
+                        <DigitalNumberBase className='digital-nine' />
+                        <DigitalNumberBase className='digital-zero' />
                     </div>
-                    {/* <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div> */}
+                    <div>{ `${memoizedHours}:${memoizedMinutes}:${zeroedSeconds}` }</div>
                 </div>
             </header>
         </div>
