@@ -6,11 +6,11 @@ import DigitalNumberBase from './DigitalNumberBase';
 import DigitalSeparator from './DigitalSeparator';
 
 type DigitalComponents = {
-    [key: string]: JSX.Element;
+    [key: string]: string;
 }
 
 const getDigitalComponent = (num: string) => {
-    const digitalComponents: any = {
+    const digitalComponents: DigitalComponents = {
         "0": 'zero',
         "1": 'one',
         "2": 'two',
