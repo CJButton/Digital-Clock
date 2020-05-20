@@ -36,19 +36,27 @@ const getDigitalComponent = (num: string) => {
  * PART 2: ANALOG CLOCK
  */
 
+ const zeroPrepender = (timeUnit: number) => {
+    if (timeUnit < 10) {
+        return `0${timeUnit}`.split('');
+    }
+
+    return `${timeUnit}`.split('');
+};
+
 const ClockIndex = () => {
     const [time, setTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const { hours, minutes, seconds } = time;
 
     const memoizedHours = useMemo(() => {
-        return hours;
-    }, [hours]).toString().split('');
+        return zeroPrepender(hours);
+    }, [hours]);
 
     const memoizedMinutes = useMemo(() => {
-        return minutes;
-    }, [minutes]).toString().split('');
+        return zeroPrepender(minutes);
+    }, [minutes]);;
 
-    const zeroedSeconds = seconds < 10 ? `${0}${seconds}`.split('') : seconds.toString().split('');
+    const zeroedSeconds = zeroPrepender(seconds);
 
     const intervalInitiatiors = () => {
         setInterval(() => {
@@ -72,7 +80,7 @@ const ClockIndex = () => {
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
-                    <div style={{ display: 'flex' }}>
+                    <div style={{ display: 'flex', height: '100%' }}>
                         { memoizedHours.map((el) => {
                             const num = getDigitalComponent(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
