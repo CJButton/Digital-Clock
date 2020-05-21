@@ -4,6 +4,24 @@
     background-color: black;
 }
 
+.meridian-wrap {
+    margin: auto 0 auto 25px;
+}
+
+.am,
+.pm {
+    color: cyan;
+    text-shadow: 2px 2px 10px cyan;
+    margin: 10px;
+
+}
+
+.inactive {
+    color: darkcyan;
+    border-color: black;
+}
+
+
 .digital-base,
 .digital-one,
 .digital-two,
@@ -22,6 +40,10 @@
     flex-direction: column;
     margin: auto;
     
+}
+
+.digital-separator {
+    width: 25px;
 }
 
 .digital-base,

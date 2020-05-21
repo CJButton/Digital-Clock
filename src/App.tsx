@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import classnames from 'classnames';
 import './App.scss';
 import './styles/digital/numbers.scss';
 
 import DigitalNumberBase from './DigitalNumberBase';
 import DigitalSeparator from './DigitalSeparator';
 
-type DigitalComponents = {
+type DigitalClassName = {
     [key: string]: string;
 }
 
-const getDigitalComponent = (num: string) => {
-    const digitalComponents: DigitalComponents = {
+const getDigitalClassName = (num: string) => {
+    const digitalClassName: DigitalClassName = {
         "0": 'zero',
         "1": 'one',
         "2": 'two',
@@ -22,7 +23,7 @@ const getDigitalComponent = (num: string) => {
         "8": 'eight',
         "9": 'nine',
     };
-    return digitalComponents[num];
+    return digitalClassName[num];
 }
 
 
@@ -58,6 +59,14 @@ const ClockIndex = () => {
 
     const zeroedSeconds = zeroPrepender(seconds);
 
+    const meridiemAM = useMemo(() => {
+        if (hours < 12) {
+            return true;
+        }
+
+        return false;
+    }, [hours]);
+
     const intervalInitiatiors = () => {
         setInterval(() => {
             const date = new Date();
@@ -76,23 +85,32 @@ const ClockIndex = () => {
         initiateInterval();
     }, []);
 
+    console.log(meridiemAM, 'meridiemAM')
     return (
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
                     <div style={{ display: 'flex', height: '100%' }}>
+                        <div className='meridian-wrap'>
+                            <div className={classnames('am', {inactive:  !meridiemAM })}>
+                                AM
+                            </div>
+                            <div className={classnames('pm', {inactive:  meridiemAM })}>
+                                PM
+                            </div>
+                        </div>
                         { memoizedHours.map((el) => {
-                            const num = getDigitalComponent(el);
+                            const num = getDigitalClassName(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
                         })}
                         <DigitalSeparator />
                         { memoizedMinutes.map((el) => {
-                            const num = getDigitalComponent(el);
+                            const num = getDigitalClassName(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
                         })}
                         <DigitalSeparator />
                         { zeroedSeconds.map((el) => {
-                            const num = getDigitalComponent(el);
+                            const num = getDigitalClassName(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
                         })}
                     </div>
