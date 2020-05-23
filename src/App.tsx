@@ -26,17 +26,6 @@ const getDigitalClassName = (num: string) => {
     return digitalClassName[num];
 }
 
-
-// toggle will be handled with useState
-// Part 1: Digital Clock
-/*
- * Successes: 
- * Basic digital clock runs
- * Create css to display a digital one
- * 
- * PART 2: ANALOG CLOCK
- */
-
  const zeroPrepender = (timeUnit: number) => {
     if (timeUnit < 10) {
         return `0${timeUnit}`.split('');
@@ -45,27 +34,40 @@ const getDigitalClassName = (num: string) => {
     return `${timeUnit}`.split('');
 };
 
-const ClockIndex = () => {
+const STYLE_TWENTY_FOUR = '24';
+const STYLE_TWELVE = '12';
+
+type Props = {
+    style?: typeof STYLE_TWENTY_FOUR | typeof STYLE_TWELVE;
+};
+
+const ClockIndex = ({ style = '12' }: Props) => {
     const [time, setTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const { hours, minutes, seconds } = time;
 
     const memoizedHours = useMemo(() => {
+        if (style === STYLE_TWELVE && hours > 12) {
+            return zeroPrepender(hours - 12)
+        }
+
         return zeroPrepender(hours);
-    }, [hours]);
+    }, [hours, style]);
 
     const memoizedMinutes = useMemo(() => {
         return zeroPrepender(minutes);
-    }, [minutes]);;
+    }, [minutes]);
 
     const zeroedSeconds = zeroPrepender(seconds);
 
-    const meridiemAM = useMemo(() => {
+    const meridiem = useMemo(() => {
+        if (style === STYLE_TWENTY_FOUR) return null;
+        
         if (hours < 12) {
-            return true;
+            return 'am';
         }
 
-        return false;
-    }, [hours]);
+        return 'pm';
+    }, [hours, style]);
 
     const intervalInitiatiors = () => {
         setInterval(() => {
@@ -85,20 +87,20 @@ const ClockIndex = () => {
         initiateInterval();
     }, []);
 
-    console.log(meridiemAM, 'meridiemAM')
     return (
         <div className="App">
             <header className="App-header">
                 <div className='digital-wrapper'>
-                    <div style={{ display: 'flex', height: '100%' }}>
+
                         <div className='meridian-wrap'>
-                            <div className={classnames('am', {inactive:  !meridiemAM })}>
+                            <div className={classnames('am', {active: meridiem === 'am' })}>
                                 AM
                             </div>
-                            <div className={classnames('pm', {inactive:  meridiemAM })}>
+                            <div className={classnames('pm', {active: meridiem === 'pm' })}>
                                 PM
                             </div>
                         </div>
+
                         { memoizedHours.map((el) => {
                             const num = getDigitalClassName(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
@@ -113,7 +115,7 @@ const ClockIndex = () => {
                             const num = getDigitalClassName(el);
                             return <DigitalNumberBase className={`digital-${num}`} />
                         })}
-                    </div>
+                    
                 </div>
             </header>
         </div>
