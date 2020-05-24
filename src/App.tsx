@@ -37,11 +37,18 @@ const getDigitalClassName = (num: string) => {
 const STYLE_TWENTY_FOUR = '24';
 const STYLE_TWELVE = '12';
 
+const COLOR_RED = 'red';
+const COLOR_GREEN = 'green';
+const COLOR_CYAN = 'cyan';
+
+type COLOR_THEMES = typeof COLOR_RED | typeof COLOR_GREEN | typeof COLOR_CYAN;
+
 type Props = {
     style?: typeof STYLE_TWENTY_FOUR | typeof STYLE_TWELVE;
+    color?: COLOR_THEMES;
 };
 
-const ClockIndex = ({ style = '12' }: Props) => {
+const ClockIndex = ({ style = '24', color = 'cyan' }: Props) => {
     const [time, setTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const { hours, minutes, seconds } = time;
 
@@ -85,7 +92,8 @@ const ClockIndex = ({ style = '12' }: Props) => {
             intervalInitiatiors();
         }
         initiateInterval();
-    }, []);
+        document.documentElement.setAttribute("data-theme", color);
+    }, [color]);
 
     return (
         <div className="App">

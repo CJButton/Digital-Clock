@@ -1,8 +1,19 @@
 
-$base-color: limegreen;
-$base-red: red;
-$base-cyan: cyan;
-$base-green: limegreen;
+:root {
+    --color: #00ffff;
+};
+
+[data-theme="red"] {
+    --color: #ff0000;
+}
+
+[data-theme="cyan"] {
+    --color: #00ffff;
+}
+
+[data-theme="green"] {
+    --color: #2fff00;
+}
 
 .digital-wrapper {
     width: 100%;
@@ -18,14 +29,14 @@ $base-green: limegreen;
 .am,
 .pm {
     margin: 10px;
-    color: $base-color;
+    color: var(--color);
     border-color: black;
     
 }
 
 .active {
-    color: $base-color;
-    text-shadow: 2px 2px 10px $base-color;
+    color: var(--color);
+    text-shadow: 2px 2px 10px var(--color);
 }
 
 
@@ -66,72 +77,72 @@ $base-green: limegreen;
 .digital-zero {
     .top-half {
         .top {
-            border-top: 10px solid $base-color;
+            border-top: 10px solid var(--color);
             border-left: 10px solid transparent;
             height: 0;
             border-right: 10px solid transparent;
-            box-shadow: 0px 0px 25px $base-color;
+            box-shadow: 0px 0px 25px var(--color);
         }
 
         .left-and-right {
             display: flex;
             .left {
-                border-left: 10px solid $base-color;
+                border-left: 10px solid var(--color);
                 border-top: 10px solid transparent;
                 height: 50px;
                 border-bottom: 10px solid transparent;
-                box-shadow: 0px 0px 25px $base-color;
+                box-shadow: 0px 0px 25px var(--color);
             }
             .right {
-                border-right: 10px solid $base-color;
+                border-right: 10px solid var(--color);
                 border-top: 10px solid transparent;
                 height: 50px;
                 border-bottom: 10px solid transparent;
-                box-shadow: 0px 0px 25px $base-color;
+                box-shadow: 0px 0px 25px var(--color);
                 margin-left: auto;
             }
         }
     }
 
     .center-top {
-        border-bottom: 5px solid $base-color;
+        border-bottom: 5px solid var(--color);
         border-left: 10px solid transparent;
         height: 0;
         border-right: 10px solid transparent;
-        box-shadow: 0px 0px 25px $base-color;
+        box-shadow: 0px 0px 25px var(--color);
     }
     .center-bottom {
-        border-top: 5px solid $base-color;
+        border-top: 5px solid var(--color);
         border-left: 10px solid transparent;
         height: 0;
         border-right: 10px solid transparent;
-        box-shadow: 0px 0px 25px $base-color;
+        box-shadow: 0px 0px 25px var(--color);
     }
 
     .bottom-half {
         .bottom {
-            border-bottom: 10px solid $base-color;
+            border-bottom: 10px solid var(--color);
             border-left: 10px solid transparent;
             height: 0;
             border-right: 10px solid transparent;
-            box-shadow: 0px 0px 25px $base-color;
+            box-shadow: 0px 0px 25px var(--color);
         }
         .left-and-right {
             display: flex;
             .left {
-                border-left: 10px solid $base-color;
+                border-left: 10px solid var(--color);
                 border-top: 10px solid transparent;
                 height: 50px;
                 border-bottom: 10px solid transparent;
-                box-shadow: 0px 0px 25px $base-color;
+                box-shadow: 0px 0px 25px var(--color);
             }
             .right {
-                border-right: 10px solid $base-color;
+                border-right: 10px solid var(--color);
                 border-top: 10px solid transparent;
                 height: 50px;
                 border-bottom: 10px solid transparent;
                 margin-left: auto;
-                box-shadow: 0px 0px 25px $base-color;
+                box-shadow: 0px 0px 25px var(--color);
             }
         }
     }
@@ -333,8 +344,8 @@ $base-green: limegreen;
     .bottom {
         margin: auto;
         border-radius: 100%;
-        border: 10px solid $base-color;
+        border: 10px solid var(--color);
         margin-left: auto;
-        box-shadow: 0px 0px 25px $base-color;
+        box-shadow: 0px 0px 25px var(--color);
     }
 }
