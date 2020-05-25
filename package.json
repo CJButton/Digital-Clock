@@ -1,11 +1,5 @@
 {
-  "name": "@cjbutton/digital-clock",
-  "version": "1.0.0",
-  "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
@@ -18,25 +12,48 @@
     "react-scripts": "3.4.1",
     "typescript": "^3.9.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "@cjbutton/digital-clock",
+    "version": "0.0.16",
+    "main": "dist/index.js",
+    "private": false,
+    "license": "(ISC OR GPL-3.0)",
+    "module": "dist/index.js",
+    "babel": {
+        "presets": [
+            "@babel/react"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CJButton/Digital-Clock.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "publish:npm": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/DigitalClock --out-dir dist --copy-files"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "babel-cli": "^6.26.0"
+    }
 }
