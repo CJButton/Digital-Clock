@@ -1,5 +1,5 @@
 {
-  "name": "digital-clock",
+  "name": "@cjbutton/digital-clock",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

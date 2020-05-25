@@ -1,6 +1,8 @@
 # Digital Clock
 
-Digital Clock Display with options for 12/24 hour clock and three colors.
+Digital Clock Display with options for 12/24 hour clock in three colors. Has a soft glow affect as well.
+
+Written in TypeScript with Sass.
 
 ![Cyan-Digital-Clock](https://res.cloudinary.com/ddbfkqb9m/image/upload/v1590402552/digital-clock_tuzjkx.png)
 
