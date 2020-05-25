@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import classnames from 'classnames';
-import './App.scss';
-import './styles/digital/numbers.scss';
+import '../App.scss';
+import '../styles/digital/numbers.scss';
 
 import DigitalNumberBase from './DigitalNumberBase';
 import DigitalSeparator from './DigitalSeparator';
