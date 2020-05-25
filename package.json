@@ -1,12 +1,14 @@
 {
-    "name": "digital-clock",
+    "name": "@cjbutton/digital-clock",
     "version": "0.0.16",
     "main": "dist/index.js",
     "private": false,
     "license": "(ISC OR GPL-3.0)",
     "module": "dist/index.js",
     "babel": {
-        "presets": [ "@babel/react" ]
+        "presets": [
+            "@babel/react"
+        ]
     },
     "repository": {
         "type": "git",
@@ -29,7 +31,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "publish:npm": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/DigitalClock --out-dir dist --copy-files"
+        "publish:npm": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/DigitalClock --out-dir dist --copy-files"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -44,9 +46,10 @@
             "last 1 chrome version",
             "last 1 firefox version",
             "last 1 safari version"
-            ]
+        ]
     },
     "devDependencies": {
-        "@babel/cli": "^7.2.3"
+        "@babel/cli": "^7.2.3",
+        "babel-cli": "^6.26.0"
     }
 }
