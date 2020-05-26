@@ -5,14 +5,17 @@
 
 [data-theme="red"] {
     --color: #ff0000;
+    --darkColor: darkred;
 }
 
 [data-theme="cyan"] {
     --color: #00ffff;
+    --darkColor: darkcyan;
 }
 
 [data-theme="green"] {
     --color: #2fff00;
+    --darkColor: darkgreen;
 }
 
 .digital-wrapper {
@@ -29,7 +32,7 @@
 .am,
 .pm {
     margin: 10px;
-    color: var(--color);
+    color: var(--darkColor);
     border-color: black;
     
 }
