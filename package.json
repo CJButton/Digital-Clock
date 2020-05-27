@@ -13,7 +13,7 @@
         "typescript": "^3.9.3"
     },
     "name": "@cjbutton/digital-clock",
-    "version": "0.0.19",
+    "version": "0.1.00",
     "main": "dist/index.js",
     "private": false,
     "license": "(ISC OR GPL-3.0)",

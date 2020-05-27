@@ -4,7 +4,7 @@ Digital Clock Display with options for 12/24 hour clock in three colors. Has a s
 
 Written in TypeScript with Sass.
 
-![Cyan-Digital-Clock](https://res.cloudinary.com/ddbfkqb9m/image/upload/v1590402552/digital-clock_tuzjkx.png)
+![Cyan-Digital-Clock](https://res.cloudinary.com/ddbfkqb9m/image/upload/v1590576786/screenshot-192.168.11.7_3000-2020.05.27-19_52_09_ycolh1.png)
 
 ### Example Usage
 
@@ -20,7 +20,7 @@ But we can pass props like so:
 
 ### Options
 
-Prop Name | Values | Prop Type | Defaults
+Prop | Values | Type | Default
 ------------ | ------------- | ------------- | -------------
 Type | "12" / "24" | string | "24"
 Color | "cyan" / "red" / "green" | string | "cyan"
