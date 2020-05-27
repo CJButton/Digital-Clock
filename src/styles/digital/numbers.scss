@@ -21,7 +21,7 @@
 .digital-wrapper {
     width: 100%;
     height: 250px;
-    background-color: black;
+    background-color: transparent;
     display: flex;
 }
 
@@ -33,7 +33,7 @@
 .pm {
     margin: 10px;
     color: var(--darkColor);
-    border-color: black;
+    border-color: transparent;
     
 }
 
@@ -56,7 +56,7 @@
 .digital-zero,
 .digital-separator {
     width: 100px;
-    background-color: black;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -154,35 +154,35 @@
 .digital-one {
     .top-half {
         .top {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
 
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
     }
 
     .center-top {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
     .center-bottom {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
 
     .bottom-half {
         .bottom {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -193,7 +193,7 @@
     .top-half {
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -202,7 +202,7 @@
     .bottom-half {
         .left-and-right {
             .right {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -213,7 +213,7 @@
     .top-half {
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -222,7 +222,7 @@
     .bottom-half {
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -232,19 +232,19 @@
 .digital-four {
     .top-half {
         .top {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
     }
 
     .bottom-half {
         .bottom {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -255,7 +255,7 @@
     .top-half {
         .left-and-right {
             .right {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -264,7 +264,7 @@
     .bottom-half {
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -275,7 +275,7 @@
     .top-half {
         .left-and-right {
             .right {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -286,29 +286,29 @@
     .top-half {
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
     }
 
     .center-top {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
     .center-bottom {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
 
     .bottom-half {
         .bottom {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -318,12 +318,12 @@
 .digital-nine {
     .bottom-half {
         .bottom {
-            border-color: black;
+            border-color: transparent;
             box-shadow: none;
         }
         .left-and-right {
             .left {
-                border-color: black;
+                border-color: transparent;
                 box-shadow: none;
             }
         }
@@ -332,11 +332,11 @@
 
 .digital-zero {
     .center-top {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
     .center-bottom {
-        border-color: black;
+        border-color: transparent;
         box-shadow: none;
     }
 }

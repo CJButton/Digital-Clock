@@ -19,7 +19,11 @@
     "license": "(ISC OR GPL-3.0)",
     "module": "dist/index.js",
     "babel": {
-        "presets": [ "react", "env", "stage-2" ]
+        "presets": [
+            "react",
+            "env",
+            "stage-2"
+        ]
     },
     "repository": {
         "type": "git",
