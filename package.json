@@ -13,7 +13,7 @@
         "typescript": "^3.9.3"
     },
     "name": "@cjbutton/digital-clock",
-    "version": "0.1.00",
+    "version": "0.1.01",
     "main": "dist/index.js",
     "private": false,
     "license": "(ISC OR GPL-3.0)",
@@ -34,10 +34,9 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "react-scripts build",
+        "build": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/DigitalClock --out-dir dist --copy-files",
         "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "publish:npm": "set NODE_ENV=production && rm -rf dist && mkdir dist src/DigitalClock --out-dir dist --copy-files"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": "react-app"
