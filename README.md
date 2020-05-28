@@ -1,5 +1,8 @@
 # Digital Clock
 
+********* DO NOT INSTALL ********
+********* Sorry. Having issues with packaging at the moment ********
+
 Digital Clock Display with options for 12/24 hour clock in three colors. Has a soft glow affect as well.
 
 Written in TypeScript with Sass.
