@@ -16,7 +16,7 @@ npm install --save @cjbutton/digital-clock
 import React, { Component } from 'react'
 
 import MyComponent from '@cjbutton/digital-clock'
-import '@cjbutton/digital-clock/dist/index.css'
+import '@cjbutton/digital-clock/dist/index.scss'
 
 class Example extends Component {
   render() {

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from '@cjbutton/digital-clock'
+import DigitalClock from '@cjbutton/digital-clock'
 import '@cjbutton/digital-clock/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <DigitalClock />
 }
 
 export default App
