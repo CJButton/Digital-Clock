@@ -1,8 +1,10 @@
-# @cjbutton/digital-clock
+# Digital Clock
 
-> Digital-Clock made with TypeScript
+Digital Clock Display with options for 12/24 hour clock in three colors. Has a soft glow affect as well.
 
-[![NPM](https://img.shields.io/npm/v/@cjbutton/digital-clock.svg)](https://www.npmjs.com/package/@cjbutton/digital-clock) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Written in TypeScript with Sass.
+
+![Cyan-Digital-Clock](https://res.cloudinary.com/ddbfkqb9m/image/upload/v1590576786/screenshot-192.168.11.7_3000-2020.05.27-19_52_09_ycolh1.png)
 
 ## Install
 
@@ -10,21 +12,34 @@
 npm install --save @cjbutton/digital-clock
 ```
 
-## Usage
+## License
+
+MIT © [CJButton](https://github.com/CJButton)
+
+
+### Example Usage
+
 
 ```tsx
-import React, { Component } from 'react'
 
-import MyComponent from '@cjbutton/digital-clock'
+import DigitalClock from '@cjbutton/digital-clock'
 import '@cjbutton/digital-clock/dist/index.scss'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <DigitalClock />
   }
 }
 ```
 
-## License
+We can pass props like so:
+```
+<DigitalClock style="12" color="green">
+```
 
-MIT © [CJButton](https://github.com/CJButton)
+### Options
+
+Prop | Values | Type | Default
+------------ | ------------- | ------------- | -------------
+Type | "12" / "24" | string | "24"
+Color | "cyan" / "red" / "green" | string | "cyan"
